@@ -69,7 +69,7 @@ public class Pizza {
             if (addtakeAway==true){
                 bill=bill+"TakeAway :"+takeAway+"\n";
             }
-            bill=bill+"total price: "+price+"\n";
+            bill=bill+"total price : "+price+"\n";
         }
         return this.bill;
     }
