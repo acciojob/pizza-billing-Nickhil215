@@ -8,22 +8,26 @@ public class Pizza {
     private int extrtoppings;
     private int takeAway=20;
 
-    private  boolean addcheese=false;
-    private boolean addtopping=false;
-    private  boolean addtakeAway=false;
-    private boolean billgenerated=false;
+    private  boolean addcheese;
+    private boolean addtopping;
+    private  boolean addtakeAway;
+    private boolean billgenerated;
     private String bill;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
-        if(isVeg){
+        addtopping=false;
+        addcheese=false;
+        addtakeAway=false;
+        billgenerated=false;
+        if(isVeg==true){
             price=300;
             extrtoppings=70;
         }else{
             price=400;
             extrtoppings=120;
         }
-        bill="base price of the pizze : "+price+"\n";
+        bill="Base Price Of The Pizza: "+price+"\n";
         // your code goes here
     }
 
@@ -61,15 +65,15 @@ public class Pizza {
         if(billgenerated==false){
             billgenerated=true;
             if(addcheese==true){
-                bill=bill+"Extra Cheese :"+extracheese+"\n";
+                bill=bill+"Extra Cheese Added: "+extracheese+"\n";
             }
             if(addtopping==true){
-                bill=bill+"Extra Topping :"+extrtoppings+"\n";
+                bill=bill+"Extra Toppings Added: "+extrtoppings+"\n";
             }
             if (addtakeAway==true){
-                bill=bill+"TakeAway :"+takeAway+"\n";
+                bill=bill+"Paperbag Added: "+takeAway+"\n";
             }
-            bill=bill+"total price : "+price+"\n";
+            bill=bill+"Total Price: "+price+"\n";
         }
         return this.bill;
     }
